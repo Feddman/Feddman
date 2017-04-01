@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>  </title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenLite.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/utils/Draggable.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/plugins/CSSPlugin.min.js"></script>
+</head>
+<style type="text/css">
+
+body {
+  height: 100vh;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+    img {  
+      margin: auto;
+      top: 0; left: 0; right: 0; bottom: 0;
+      border-radius: 50%;
+      position: absolute;
+      box-shadow: 0px 0px 4px 4px black;
+    }
+
+</style>
+<body>
+    
+  <div class="img-container">
+    <img src="http://lorempixel.com/700/700" id="outer">    
+    <img src="http://lorempixel.com/500/500" id="outer">
+    <img src="http://lorempixel.com/300/300" id="outer">
+  </div>
+  <p>Draai aan de schijven</p>
+
+    <script type="text/javascript">
+      Draggable.create('img', {
+        type: "rotation",
+        throwProps : true
+      });
+    </script>
+</body>
+</html>
